@@ -6,7 +6,7 @@ const Navbar = () => {
   const [activeUsers, setActiveUsers] = useState(0);
 
   useEffect(() => {
-    const socket = io('http://localhost:3001', {
+    const socket = io('https://live-watch-api.onrender.com', {
       withCredentials: true
     });
 

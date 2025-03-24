@@ -7,7 +7,7 @@ const app = express();
 const server = http.createServer(app);
 
 app.use(cors({
-  origin: ['https://live-cric-score.vercel.app/'],
+  origin: ['https://live-cric-score.vercel.app', 'http://localhost:5173'],
   methods: ['GET', 'POST'],
   credentials: true
 }));
@@ -15,7 +15,7 @@ app.use(cors({
 // ✅ Configure Socket.IO with CORS
 const io = socketIo(server, {
   cors: {
-    origin: ['https://live-cric-score.vercel.app/'],
+    origin: ['https://live-cric-score.vercel.app', 'http://localhost:5173'],
     methods: ['GET', 'POST'],
     credentials: true
   }

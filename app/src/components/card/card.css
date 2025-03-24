@@ -1,0 +1,88 @@
+.card-body {
+    /* background-color: #494a48; */
+    background-image: url(https://img.freepik.com/free-photo/stick-blue_116380-94.jpg?t=st=1742799210~exp=1742802810~hmac=87f72d93fd521790e349546aee66c68b3781e5ed020ba1daba30e82d909a3728&w=740);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 1);
+    width: 400px;
+    height: 290px;
+    margin: 20px auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    transition: transform 0.3s ease, border-radius 0.3s ease;
+    color: rgb(149, 255, 243);
+    cursor: pointer;
+
+  }
+  .card-body:hover{
+    border-radius: 18px;
+    transform: scale(1.05);
+
+  }
+
+  .card-title{
+    text-align: center;
+    padding-bottom: 5px;
+    margin-top: 5px;
+    color: rgb(30, 255, 41);
+  }
+
+  .data1{
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  .data3{
+    color: #d10000;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+  }
+
+  .data4{
+    text-align: center;
+    color: rgb(81, 80, 81);
+  }
+
+  .statusSpan{
+    font-size: 1.4rem;
+    color: #0400ff;
+  }
+
+  .flagImg{
+    height: auto;
+    width: auto;
+    border-radius: 50%;
+  }
+
+
+
+
+
+  
+  @media (max-width: 400px) {
+    .card-body {
+      padding: 15px;
+      width: 100%;
+    }
+  
+    .card-title {
+      font-size: 18px;
+    }
+  
+    .matchType {
+      font-size: 14px;
+    }
+  
+    .status {
+      font-size: 14px;
+    }
+  
+    .t1score, .t2score {
+      font-size: 14px;
+    }
+  }
+  

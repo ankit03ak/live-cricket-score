@@ -1,0 +1,36 @@
+/* .liveMatches{
+    display: flex;
+    flex-wrap: wrap;
+} */
+
+.matchHeading {
+    text-align: center;
+  }
+  
+  .matchHeading span {
+    background-color: rgb(203, 255, 140);
+    display: inline-block;
+    padding: 8px 16px;
+    margin-top: 10px;
+    border-radius: 8px;
+    color: rgb(35, 72, 255);
+  }
+  
+.mapComponent{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.liveMatches{
+    background-image: url(https://img.freepik.com/free-vector/realistic-american-football-stadium_23-2148790745.jpg?t=st=1742725434~exp=1742729034~hmac=a61e3fd1da253a19c31b4de19a445d32c5d1538557097d8d8d83c94b017a9a28&w=1380);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;    
+}
+
+.all-Matches{
+    background-image: url(https://tse1.mm.bing.net/th?id=OIP.Wxe5HP4HGNaEPgOarK_w5AHaFG&pid=Api&P=0&h=180);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

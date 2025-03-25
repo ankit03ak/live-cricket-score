@@ -1,7 +1,7 @@
 .nav{
     border-radius: 5px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     /* background-color: #b978ff; */
     background-image: url(https://img.freepik.com/free-vector/realistic-soccer-football-stadium-illustration_52683-60377.jpg?t=st=1742796426~exp=1742800026~hmac=f62da98a139e763e490a2bc3e5f80863a959f4b2c6ab657372a4244e60966ab2&w=1380);
     height: 100px;
@@ -12,7 +12,7 @@
 }
 
 .part1{
-    margin-left: 20px;
+    /* margin-right: 100px; */
     display: flex;
     
 }
@@ -22,7 +22,7 @@
     
 }
 .part3{
-    margin-right: 50px;
+    /* margin-right: 50px; */
     display: flex;
 }
 

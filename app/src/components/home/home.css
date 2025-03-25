@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
 } */
- 
+
 .matchHeading {
     text-align: center;
   }
@@ -25,7 +25,7 @@
     background-image: url(https://img.freepik.com/free-vector/realistic-american-football-stadium_23-2148790745.jpg?t=st=1742725434~exp=1742729034~hmac=a61e3fd1da253a19c31b4de19a445d32c5d1538557097d8d8d83c94b017a9a28&w=1380);
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;    
+    background-repeat: no-repeat;  
 }
 
 .all-Matches{
@@ -34,3 +34,26 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full screen height */
+  }
+  
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #007bff; /* Blue */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  

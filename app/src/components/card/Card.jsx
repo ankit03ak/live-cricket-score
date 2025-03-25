@@ -9,8 +9,12 @@ const Card =({item}) => {
     // console.log(item);
 
     const handleCardClick = () => {
-        navigate(`/single`, { state: { item } });
+        // navigate(`/single`, { state: { item } });
+        navigate(`/single/${item.id}`, { state: { item } });
+
     };
+
+
 
   return (
     <>

@@ -14,6 +14,8 @@
     transition: transform 0.3s ease, border-radius 0.3s ease;
     color: rgb(149, 255, 243);
     cursor: pointer;
+    animation: fadeIn 0.5s ease-in-out;
+
 
   }
   .card-body:hover{

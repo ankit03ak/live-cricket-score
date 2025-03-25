@@ -1,0 +1,112 @@
+/* Container Styles */
+.strange-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+    /* background: linear-gradient(135deg, #1e90ff, #ff7f50); */
+    background-image: url("https://png.pngtree.com/background/20230408/original/pngtree-cricket-background-picture-image_2338432.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  /* Card Styles */
+  .strange-card {
+    background: rgba(255, 253, 153, 0.066); /* Light gray with transparency */
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    padding: 32px;
+    width: 50%;
+    height: 460px;
+    animation: fadeIn 0.5s ease-in-out;
+    backdrop-filter: blur(10px); /* Optional: for a glass effect */
+  }
+  
+  
+  /* Header and Title */
+  .strange-series {
+    font-size: 2.4rem;
+    color: #d90000;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  
+  /* Details */
+  .strange-detail, .strange-status {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    color: #040308;
+    font-weight: 500;
+    font-size: large;
+  }
+  
+  .strange-detail span, .strange-status span {
+    font-weight: bold;
+    color: #3503ff;
+  }
+  
+  /* Status Colors */
+  .strange-status {
+    font-size: 1.2rem;
+  }
+  
+  .strange-status span {
+    color: #ff4757;
+  }
+  
+  /* Scores Section */
+  .strange-score-title {
+    font-size: 1.8rem;
+    color: #027e65;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  
+  .strange-scores p {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #59015b;
+  }
+  
+  .strange-scores span {
+    font-weight: bold;
+  }
+  .strange-scores {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  
+  /* Error Text */
+  .strange-no-data {
+    font-size: 1.8rem;
+    color: #d63031;
+    text-align: center;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+.strange-flagImg{
+    margin-left: 50px;
+    border-radius: 50%;
+}
+
+.strange-detail{
+    margin-left: 300px;
+}
+.strange-status{
+    margin-left: 150px;
+}
+  

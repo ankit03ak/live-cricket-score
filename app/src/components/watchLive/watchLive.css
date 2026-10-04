@@ -1,0 +1,157 @@
+/* ========== Watch Live Page ========== */
+.wl-page {
+    min-height: calc(100vh - 100px);
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    padding: 40px 20px 60px;
+    font-family: "Segoe UI", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ─── Header ─── */
+.wl-header {
+    text-align: center;
+    margin-bottom: 40px;
+    animation: fadeDown 0.6s ease both;
+}
+
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.wl-live-badge {
+    display: inline-block;
+    background: #ff3b3b;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+    box-shadow: 0 0 12px rgba(255, 59, 59, 0.6);
+    animation: pulse 1.4s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 0 12px rgba(255, 59, 59, 0.6); }
+    50%       { box-shadow: 0 0 24px rgba(255, 59, 59, 1); }
+}
+
+.wl-match-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #fff;
+    margin: 0 0 6px;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+}
+
+.wl-match-subtitle {
+    font-size: 1rem;
+    color: #a8b5d4;
+    margin: 0 0 18px;
+    letter-spacing: 1px;
+}
+
+.wl-tip {
+    font-size: 0.88rem;
+    color: #ffd700;
+    background: rgba(255, 215, 0, 0.1);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    padding: 6px 18px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+/* ─── Grid ─── */
+.wl-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 520px;
+}
+
+/* ─── Card button ─── */
+.wl-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 14px;
+    padding: 18px 22px;
+    cursor: pointer;
+    color: #fff;
+    text-align: left;
+    transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+    animation: fadeUp 0.5s ease both;
+}
+
+.wl-card:nth-child(1) { animation-delay: 0.05s; }
+.wl-card:nth-child(2) { animation-delay: 0.12s; }
+.wl-card:nth-child(3) { animation-delay: 0.19s; }
+.wl-card:nth-child(4) { animation-delay: 0.26s; }
+.wl-card:nth-child(5) { animation-delay: 0.33s; }
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.wl-card:hover {
+    transform: translateY(-4px) scale(1.02);
+    background: rgba(255, 255, 255, 0.14);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+    border-color: rgba(130, 180, 255, 0.5);
+}
+
+.wl-card:active {
+    transform: scale(0.98);
+}
+
+.wl-card-icon {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.wl-card-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.wl-card-label {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.wl-card-quality {
+    font-size: 0.78rem;
+    color: #7bffb0;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.wl-card-arrow {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.45);
+    transition: color 0.2s, transform 0.2s;
+}
+
+.wl-card:hover .wl-card-arrow {
+    color: #82d4ff;
+    transform: translateX(4px);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 480px) {
+    .wl-match-title { font-size: 1.5rem; }
+    .wl-card { padding: 14px 16px; }
+}

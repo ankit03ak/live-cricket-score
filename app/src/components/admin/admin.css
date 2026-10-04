@@ -1,0 +1,230 @@
+/* ========== Admin Page ========== */
+.admin-page {
+    min-height: calc(100vh - 100px);
+    background: linear-gradient(135deg, #0f0c29, #1a1a2e, #16213e);
+    padding: 40px 20px 80px;
+    font-family: "Segoe UI", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ─── Toast ─── */
+.admin-toast {
+    position: fixed;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 28px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    z-index: 9999;
+    animation: slideDown 0.3s ease;
+    white-space: nowrap;
+}
+.admin-toast--success { background: #1db954; color: #fff; }
+.admin-toast--error   { background: #e03e3e; color: #fff; }
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateX(-50%) translateY(-12px); }
+    to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+/* ─── Header ─── */
+.admin-header {
+    text-align: center;
+    margin-bottom: 32px;
+    color: #fff;
+}
+.admin-header h1 { font-size: 1.8rem; font-weight: 800; margin: 0 0 8px; }
+.admin-header p  { color: #a8b5d4; font-size: 0.9rem; margin: 0; }
+
+/* ─── Spinner ─── */
+.admin-spinner {
+    color: #a8b5d4;
+    margin-top: 40px;
+    font-size: 1rem;
+}
+
+/* ─── Form ─── */
+.admin-form {
+    width: 100%;
+    max-width: 680px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* ─── Section ─── */
+.admin-section {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    backdrop-filter: blur(10px);
+    border-radius: 14px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.admin-section h2 {
+    color: #82d4ff;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0 0 4px;
+}
+
+/* ─── Field rows ─── */
+.admin-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.admin-row label {
+    color: #c0ceea;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* ─── Inputs ─── */
+.admin-form input,
+.admin-gate-box input {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 0.95rem;
+    padding: 10px 14px;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+}
+.admin-form input:focus,
+.admin-gate-box input:focus {
+    border-color: #82d4ff;
+    background: rgba(130, 212, 255, 0.08);
+}
+.admin-form input::placeholder { color: rgba(255,255,255,0.3); }
+
+/* ─── Stream rows ─── */
+.admin-stream-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px;
+    padding: 12px;
+}
+.admin-stream-fields {
+    display: grid;
+    grid-template-columns: 60px 1fr 1fr;
+    gap: 8px;
+    flex: 1;
+}
+.admin-stream-fields input:last-child {
+    grid-column: 1 / -1;
+}
+.admin-icon-input { text-align: center; font-size: 1.2rem; padding: 8px 4px; }
+
+/* ─── Buttons ─── */
+.admin-remove-btn {
+    background: rgba(255, 80, 80, 0.15);
+    border: 1px solid rgba(255, 80, 80, 0.3);
+    color: #ff6b6b;
+    border-radius: 8px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+    transition: background 0.2s;
+}
+.admin-remove-btn:hover { background: rgba(255, 80, 80, 0.3); }
+
+.admin-add-btn {
+    background: rgba(130, 212, 255, 0.1);
+    border: 1px dashed rgba(130, 212, 255, 0.4);
+    color: #82d4ff;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background 0.2s;
+    align-self: flex-start;
+}
+.admin-add-btn:hover { background: rgba(130, 212, 255, 0.2); }
+
+.admin-save-btn {
+    background: linear-gradient(135deg, #00c853, #1db954);
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 14px;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.2s;
+    letter-spacing: 0.5px;
+}
+.admin-save-btn:hover:not(:disabled) { opacity: 0.9; transform: translateY(-2px); }
+.admin-save-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* ─── Password Gate ─── */
+.admin-gate {
+    min-height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0f0c29, #1a1a2e, #16213e);
+    font-family: "Segoe UI", sans-serif;
+}
+.admin-gate-box {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.14);
+    backdrop-filter: blur(12px);
+    border-radius: 18px;
+    padding: 40px 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    max-width: 360px;
+    text-align: center;
+}
+.admin-gate-icon { font-size: 2.5rem; }
+.admin-gate-box h2 { color: #fff; font-size: 1.4rem; margin: 0; }
+.admin-gate-box p  { color: #a8b5d4; font-size: 0.88rem; margin: 0; }
+.admin-gate-box input { margin-top: 6px; }
+.admin-gate-box button {
+    width: 100%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 12px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    margin-top: 4px;
+}
+.admin-gate-box button:hover { opacity: 0.88; }
+.admin-error {
+    color: #ff6b6b;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 520px) {
+    .admin-stream-fields { grid-template-columns: 48px 1fr; }
+    .admin-stream-fields input:nth-child(3) { grid-column: 1 / -1; }
+}

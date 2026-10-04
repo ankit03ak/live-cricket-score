@@ -2,10 +2,10 @@
     border-radius: 5px;
     display: flex;
     justify-content: space-evenly;
-    /* background-color: #b978ff; */
-    background-image: url(https://img.freepik.com/free-vector/realistic-soccer-football-stadium-illustration_52683-60377.jpg?t=st=1742796426~exp=1742800026~hmac=f62da98a139e763e490a2bc3e5f80863a959f4b2c6ab657372a4244e60966ab2&w=1380);
+    align-items: center;
+    background: linear-gradient(90deg, #0f0c29 0%, #1a1a3e 50%, #0f0c29 100%);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
     height: 100px;
-    line-height: 100px;
     font-size: 1.2rem;
     color: white;
     cursor: pointer;
@@ -13,6 +13,7 @@
 
 .part1{
     /* margin-right: 100px; */
+    gap: 20px;
     display: flex;
     
 }
@@ -29,7 +30,7 @@
 .logo {
     width: 47px;
     height: 47px;
-    margin-top: 25px; 
+    margin-top: 10px; 
     object-fit: cover; /* Ensures the image fills the circle without distortion */
     border-radius: 50%; /* Makes it a circle */
     transition: transform 0.3s ease;
@@ -45,6 +46,7 @@
     font-weight: bolder;
     font-weight: 500;
     color: red;
+    margin-top: 15px;
   }
   .logoSpan{
     font-weight: 500;
@@ -66,4 +68,28 @@
     animation: blink 1s infinite;
   }
   
+  .watch-live {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #00c853, #00a844);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 12px rgba(0, 200, 83, 0.4);
+    transition: all 0.3s ease;
+}
+
+.watch-live:hover {
+    background: linear-gradient(135deg, #00e676, #00c853);
+    box-shadow: 0 0 22px rgba(0, 230, 118, 0.7);
+    transform: scale(1.06);
+}
+.watch-live:active {
+    transform: scale(0.97);
+}
   

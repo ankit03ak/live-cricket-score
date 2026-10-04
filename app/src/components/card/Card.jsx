@@ -44,14 +44,14 @@ const Card =({item}) => {
                     <div className="flag-t1">
                         <img className='flagImg' src={item.t1img} alt="" /> <b>{item.t1}</b>
                     </div>
-                    <div className="t1score"> {item.t1s} </div>
+                    <div className="t1score">{item.t1s || '—'}</div>
                 </div>
+                <span className="vs-divider">VS</span>
                 <div className="t2">
                     <div className="flag-t2">
-                    <img className='flagImg' src={item.t2img} alt="" /> <b> {item.t2} </b>
-
+                        <img className='flagImg' src={item.t2img} alt="" /> <b>{item.t2}</b>
                     </div>
-                    <div className="t2score"> {item.t2s} </div>
+                    <div className="t2score">{item.t2s || '—'}</div>
                 </div>
             </div>
             <div className="data4">

@@ -1,90 +1,166 @@
+/* ─── Card ─── */
 .card-body {
-    /* background-color: #494a48; */
-    background-image: url(https://img.freepik.com/free-photo/stick-blue_116380-94.jpg?t=st=1742799210~exp=1742802810~hmac=87f72d93fd521790e349546aee66c68b3781e5ed020ba1daba30e82d909a3728&w=740);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 1);
-    width: 400px;
-    height: 290px;
-    margin: 20px auto;
-    padding: 20px;
-    font-family: 'Arial', sans-serif;
-    transition: transform 0.3s ease, border-radius 0.3s ease;
-    color: rgb(149, 255, 243);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+    width: 340px;
+    padding: 18px 20px;
     cursor: pointer;
-    animation: fadeIn 0.5s ease-in-out;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    animation: fadeIn 0.4s ease both;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
 
+.card-body:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 36px rgba(0, 0, 0, 0.5);
+    border-color: rgba(96, 165, 250, 0.4);
+}
 
-  }
-  .card-body:hover{
-    border-radius: 18px;
-    transform: scale(1.05);
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
 
-  }
-
-  .card-title{
+/* ─── Series title ─── */
+.card-title {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #94a3b8;
     text-align: center;
-    padding-bottom: 5px;
-    margin-top: 5px;
-    color: rgb(30, 255, 41);
-  }
+    text-transform: uppercase;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
-  .data1{
-    color: rgb(0, 0, 0);
+/* ─── Top row: match type + date + status badge ─── */
+.data1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.matchType {
+    background: rgba(99, 102, 241, 0.2);
+    border: 1px solid rgba(99, 102, 241, 0.4);
+    color: #a5b4fc;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin: 0;
+}
+
+.date {
+    font-size: 0.78rem;
+    color: #64748b;
+    margin: 0;
+    text-align: center;
+}
+
+.mstatus {
+    font-size: 0.78rem;
+    margin: 0;
+}
+
+.mstatus span {
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.75rem;
+}
+
+/* ─── Teams row ─── */
+.data3 {
     display: flex;
     justify-content: space-between;
-    
-  }
-  .data3{
-    color: #d10000;
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 30px;
-  }
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 10px;
+    padding: 10px 12px;
+}
 
-  .data4{
+.t1, .t2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    flex: 1;
+}
+
+.flag-t1, .flag-t2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.8rem;
+    color: #e2e8f0;
+    font-weight: 600;
     text-align: center;
-    color: rgb(81, 80, 81);
-  }
+}
 
-  .statusSpan{
-    font-size: 1.4rem;
-    color: #0400ff;
-  }
+.flag-t1 b, .flag-t2 b {
+    font-size: 0.78rem;
+    color: #cbd5e1;
+    font-weight: 600;
+    max-width: 120px;
+    text-align: center;
+    line-height: 1.3;
+}
 
-  .flagImg{
-    height: auto;
-    width: auto;
+.flagImg {
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
-  }
+    object-fit: cover;
+    border: 2px solid rgba(255,255,255,0.15);
+}
 
+.t1score, .t2score {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #38bdf8;
+    text-align: center;
+    min-height: 18px;
+}
 
+.vs-divider {
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: #475569;
+    flex-shrink: 0;
+}
 
+/* ─── Status ─── */
+.data4 {
+    border-top: 1px solid rgba(255,255,255,0.07);
+    padding-top: 10px;
+}
 
+.status {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    text-align: center;
+    line-height: 1.4;
+}
 
-  
-  @media (max-width: 400px) {
-    .card-body {
-      padding: 15px;
-      width: 100%;
-    }
-  
-    .card-title {
-      font-size: 18px;
-    }
-  
-    .matchType {
-      font-size: 14px;
-    }
-  
-    .status {
-      font-size: 14px;
-    }
-  
-    .t1score, .t2score {
-      font-size: 14px;
-    }
-  }
-  
+.statusSpan {
+    color: #60a5fa;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 400px) {
+    .card-body { width: 100%; }
+}

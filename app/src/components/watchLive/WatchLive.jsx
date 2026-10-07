@@ -7,7 +7,6 @@ const BACKEND = "https://live-watch-api.onrender.com";
 
 const WatchLive = () => {
     const [config, setConfig] = useState(matchConfig); // fallback = local config
-    const [fetching, setFetching] = useState(true);
 
     useEffect(() => {
         // Fetch latest config from backend
@@ -15,7 +14,6 @@ const WatchLive = () => {
             .then((r) => r.json())
             .then((data) => setConfig(data))
             .catch(() => {/* silently fall back to matchConfig.js */})
-            .finally(() => setFetching(false));
 
         // Listen for live updates when admin saves
         const socket = io(BACKEND, { withCredentials: true });

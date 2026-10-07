@@ -3,6 +3,7 @@
     min-height: calc(100vh - 100px);
     background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
     padding: 40px 20px 60px;
+    width: 100%;
     font-family: "Segoe UI", sans-serif;
     display: flex;
     flex-direction: column;
@@ -152,6 +153,10 @@
 
 /* ─── Responsive ─── */
 @media (max-width: 480px) {
-    .wl-match-title { font-size: 1.5rem; }
-    .wl-card { padding: 14px 16px; }
+    .wl-page { padding: 28px 12px 40px; }
+    .wl-header { margin-bottom: 28px; }
+    .wl-match-title { font-size: clamp(1.35rem, 7vw, 1.5rem); }
+    .wl-match-subtitle { font-size: 0.9rem; }
+    .wl-tip { padding: 6px 12px; font-size: 0.8rem; }
+    .wl-card { padding: 14px 16px; gap: 12px; }
 }

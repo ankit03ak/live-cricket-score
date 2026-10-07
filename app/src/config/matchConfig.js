@@ -1,7 +1,7 @@
 // ✏️ EDIT THIS FILE to update the match details & stream links
 const matchConfig = {
     matchTitle: "India Vs Windies",
-    matchSubtitle: "2nd ODI",
+    matchSubtitle: "T20",
     streams: [
         {
             label: "TNT 3",

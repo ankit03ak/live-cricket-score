@@ -30,7 +30,7 @@ const io = socketIo(server, {
 // ─── In-memory match config (resets on server restart) ───────────────────────
 let matchConfig = {
   matchTitle: 'India Vs Windies',
-  matchSubtitle: '2nd ODI',
+  matchSubtitle: 'T20',
   streams: [
     { label: 'TNT 3',             quality: 'All Quality',          url: 'https://dekhobhai.pages.dev/TNT3',   icon: '📡' },
     { label: 'Willow By Cricbuzz', quality: 'All Quality',          url: 'https://dekhobhai.pages.dev/Willow', icon: '🌿' },

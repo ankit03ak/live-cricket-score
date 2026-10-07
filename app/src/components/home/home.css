@@ -11,6 +11,7 @@ body {
 .liveMatches,
 .all-Matches {
     padding: 16px 20px 32px;
+    width: 100%;
 }
 
 /* ─── Section headings ─── */
@@ -63,4 +64,22 @@ body {
 
 @keyframes spin {
     to { transform: rotate(360deg); }
+}
+
+@media (max-width: 480px) {
+    .liveMatches,
+    .all-Matches {
+        padding-inline: 12px;
+    }
+
+    .matchHeading span {
+        max-width: 100%;
+        padding-inline: 14px;
+        font-size: 0.9rem;
+    }
+
+    .mapComponent {
+        gap: 14px;
+        padding-top: 10px;
+    }
 }

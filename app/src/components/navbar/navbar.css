@@ -1,30 +1,36 @@
 .nav{
     border-radius: 5px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    gap: 16px;
     background: linear-gradient(90deg, #0f0c29 0%, #1a1a3e 50%, #0f0c29 100%);
     border-bottom: 1px solid rgba(255,255,255,0.08);
-    height: 100px;
+    min-height: 100px;
+    padding: 14px 24px;
     font-size: 1.2rem;
     color: white;
     cursor: pointer;
 }
 
 .part1{
-    /* margin-right: 100px; */
-    gap: 20px;
+    gap: 12px;
     display: flex;
-    
+    align-items: center;
+    flex-shrink: 0;
 }
 .part2{
     display: flex;
     font-size: 1.6rem;
-    
+    text-align: center;
+    flex: 1;
+    justify-content: center;
 }
 .part3{
-    /* margin-right: 50px; */
     display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
 }
 
 .logo {
@@ -42,7 +48,7 @@
   }
 
   .logoName{
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: bolder;
     font-weight: 500;
     color: red;
@@ -50,7 +56,7 @@
   }
   .logoSpan{
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: inherit;
     color: rgb(0, 255, 17);
   }
 
@@ -91,5 +97,59 @@
 }
 .watch-live:active {
     transform: scale(0.97);
+}
+
+@media (max-width: 700px) {
+    .nav {
+        min-height: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 12px 16px 14px;
+        gap: 10px 16px;
+    }
+
+    .part1 {
+        flex: 1 1 auto;
+    }
+
+    .part2 {
+        order: 3;
+        flex-basis: 100%;
+        font-size: 1rem;
+    }
+
+    .part3 {
+        font-size: 0.95rem;
+    }
+
+    .watch-live {
+        padding: 9px 14px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 390px) {
+    .nav {
+        gap: 8px 10px;
+        padding-inline: 12px;
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logoName {
+        font-size: 1.05rem;
+    }
+
+    .part3 {
+        font-size: 0.8rem;
+    }
+
+    .watch-live {
+        padding-inline: 10px;
+        font-size: 0.85rem;
+    }
 }
   

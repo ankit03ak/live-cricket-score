@@ -1,7 +1,7 @@
 // ✏️ EDIT THIS FILE to update the match details & stream links
 const matchConfig = {
-    matchTitle: "India Vs Windies",
-    matchSubtitle: "T20",
+    matchTitle: "New Zealand vs India T20",
+    matchSubtitle: "new zealand tour of india 2026",
     streams: [
         {
             label: "TNT 3",
@@ -31,6 +31,30 @@ const matchConfig = {
             label: "All Devices",
             quality: "Best for Mobile & PC",
             url: "https://newball.pages.dev/All",
+            icon: "📱",
+        },
+        {
+            label: "HIN - SD",
+            quality: "Best for Mobile & PC",
+            url: "https://ci365.pages.dev/HIND2",
+            icon: "📱",
+        },
+        {
+            label: "ENG - SD",
+            quality: "Best for Mobile & PC",
+            url: "https://ci365.pages.dev/ENG2",
+            icon: "📱",
+        },
+        {
+            label: "Prime Hindi - All Quality ",
+            quality: "Best for Mobile & PC",
+            url: "https://ci365.pages.dev/PHINDI",
+            icon: "📱",
+        },
+        {
+            label: "Prime English - All Quality ",
+            quality: "Best for Mobile & PC",
+            url: "https://ci365.pages.dev/PENGLISH ",
             icon: "📱",
         },
     ],

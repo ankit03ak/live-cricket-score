@@ -1,29 +1,9 @@
-import React, { useEffect, useState } from "react";
-import io from "socket.io-client";
+import React from "react";
 import "./navbar.css";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-    const [activeUsers, setActiveUsers] = useState(0);
     const navigate = useNavigate();
-
-    useEffect(() => {
-        const socket = io("https://live-watch-api.onrender.com", {
-            withCredentials: true
-        });
-
-        socket.on("active-users", (count) => {
-            setActiveUsers(count);
-        });
-
-        socket.on("connect_error", (error) => {
-            console.error("Socket connection error:", error);
-        });
-
-        return () => {
-            socket.disconnect();
-        };
-    }, []);
 
     const handleClick = () => {
         navigate("/watch-live");
@@ -53,10 +33,6 @@ const Navbar = () => {
             <div className="watch-live" onClick={handleClick}>
                 Watch Live
             </div>
-                <div className="part3">
-                    <span className="blinking-dot">🔴</span>
-                    Watching: {activeUsers}
-                </div>
             </div>
 
         </>

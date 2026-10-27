@@ -1,27 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./watchLive.css";
 import matchConfig from "../../config/matchConfig";
-import io from "socket.io-client";
-
-const BACKEND = "https://live-watch-api.onrender.com";
 
 const WatchLive = () => {
-    const [config, setConfig] = useState(matchConfig); // fallback = local config
-
-    useEffect(() => {
-        // Fetch latest config from backend
-        fetch(`${BACKEND}/match-config`)
-            .then((r) => r.json())
-            .then((data) => setConfig(data))
-            .catch(() => {/* silently fall back to matchConfig.js */})
-
-        // Listen for live updates when admin saves
-        const socket = io(BACKEND, { withCredentials: true });
-        socket.on("match-config-updated", (newConfig) => setConfig(newConfig));
-        return () => socket.disconnect();
-    }, []);
-
-    const { matchTitle, matchSubtitle, streams } = config;
+    const { matchTitle, matchSubtitle, streams } = matchConfig;
     const handleStream = (url) => {
         window.open(url, "_blank");
     };
